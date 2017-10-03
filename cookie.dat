@@ -1,0 +1,10 @@
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file!  Do not edit.
+
+cas.hdu.edu.cn	FALSE	/	FALSE		key_dcp_cas	kphmZTzQjBGRWrJcsThsg95tGXj7VndGn2ymc8NZ2hYGP21LKTlG!2084181827
+cas.hdu.edu.cn	FALSE	/	FALSE		route	c4983b7b52b1d14e475c56063c71cbb3
+cas.hdu.edu.cn	FALSE	/cas	FALSE		CASTGC	TGC-3450228-2toztpbDV9aMNT3Nk0WIfdh2hSdXxcBeXvpxMT8Y090hxAeKJ4
+jxdc.hdu.edu.cn	FALSE	/	FALSE		PHPSESSID	844eb59c695f2156f2ce806d209af40d
+jxgl.hdu.edu.cn	FALSE	/	FALSE		ASP.NET_SessionId	jthp2z55tpq1mounbeyqoveg
+jxgl.hdu.edu.cn	FALSE	/	FALSE		route	8d6cef81efff9b6a4d8532c8c2684b46

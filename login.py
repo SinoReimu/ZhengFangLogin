@@ -1,13 +1,11 @@
 #!/usr/bin/python
-import urllib2
+
 import cookielib
-import zlib
 import hashlib
 import sys
-import os
 import urllib
 import re
-from util import read
+from util import read, getopener
 
 # get arguments
 
@@ -21,13 +19,12 @@ else:
 # init my opener
 
 cookie = cookielib.MozillaCookieJar('cookie.dat')
-handler = urllib2.HTTPCookieProcessor(cookie)
-opener = urllib2.build_opener(handler)
-opener.addheaders = [('Cache-Control', 'max-age=0'),('Upgrade-Insecure-Requests','1'),('Origin', 'http://cas.hdu.edu.cn'),('Accept','text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'),('Accept-Encoding','gzip, deflate, sdch'),('Accept-Language','zh-CN,zh;q=0.8'),('Host','jxgl.hdu.edu.cn'),('Referer','http://cas.hdu.edu.cn/cas/login?service=http://jxgl.hdu.edu.cn/default.aspx'),('User-Agent','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.90 Safari/537.36')]
+opener = getopener(cookie)
 
 # cas get ticket
 
 para_dct = {}
+response = opener.open('http://cas.hdu.edu.cn/cas/login?service=http://jxgl.hdu.edu.cn/default.aspx')
 
 para_dct['serviceName'] = 'null'
 para_dct['LoginErrCnt'] = '0'
